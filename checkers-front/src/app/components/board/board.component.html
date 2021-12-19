@@ -1,0 +1,20 @@
+<html>
+<body>
+  <div>
+    
+<table style="width: 400px;">
+  <tr *ngFor="let y of eight"><!-- [ngClass]="colores+x+y" (mouseover)="changeStyle($event, x, y)" (mouseout)="changeStyle($event, x, y)"-->
+    <td (click)="onSquareClick(x, y)" *ngFor="let x of eight" [ngClass]="{red: hovers && xx == x && yy == y && (x + y) % 2 != 0}" ng-init="hovers = false; xx = -1; yy = -1" (mouseover)="hovers = true; xx = x; yy = y; getAllMoves(x,y)" (mouseout)="hovers = false; xx = -1; yy = -1; removeMoves()" [style.background-color]="getBoardStyle(x, y)">
+        <span class="dot" *ngIf="(x + y) % 2 != 0 && board && board.squares && board.squares[(x + (y-1)*8) - 1].checker" [style.background-color]="getCheckerStyle(board.squares[(x + (y-1)*8) - 1].checker.color)"></span>
+        <span class="dot1" *ngIf="thatAreAvailable[(x + (y-1)*8) - 1] == 1"></span>
+      </td>
+  </tr>
+</table>
+</div>
+<div>
+  <input #boardId type="text" name="fname">
+  <button (click)="onCreateClick()">Create</button>
+  <button (click)="onLoadClick(+boardId.value)">Load</button>
+</div>
+</body>
+</html>

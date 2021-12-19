@@ -1,0 +1,44 @@
+table, th {
+    text-align: center;
+    border-spacing: 0px;
+}
+
+td {
+    text-align: center;
+    width: 48px;
+    height: 48px;
+}
+
+.dot {
+
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    align-content: center;
+  }
+  .dot1 {
+
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    align-content: center;
+    background-color: red;
+  }
+
+  .red1 {
+    background-color: red !important;
+  }
+  .red {
+    background-color: red !important;
+  }
+  .yellow121 {
+    background-color: yellow !important;
+  }
+
+  .yellow3 {
+    background-color: yellow !important;
+  }
